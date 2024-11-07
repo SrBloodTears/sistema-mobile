@@ -1,20 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <form (submit)="autenticarUsuario()">
+    <ion-list>
+      <ion-item>
+        <ion-input label="Usuário" type="text" name="usuario" [(ngModel)]="instancia.username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Senha" type="password" name="senha" [(ngModel)]="instancia.password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" (click)="autenticarUsuario()">Autenticar</ion-button> 
+  </form>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>
